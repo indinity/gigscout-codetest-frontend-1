@@ -1,21 +1,41 @@
-# ImpactPeople 의 개발 과제 레포지토리
+# TypeScript Next.js example
 
-안녕하세요.
+This is a really simple project that shows the usage of Next.js with TypeScript.
 
-먼저 Impact People 의 개발자 모집에 참여해주셔서 감사드립니다:)
+## Deploy your own
 
-본 개발 과제의 목적은 Impact People 에서 사용하는 프론트엔드 프레임워크인 NextJs 와 Typescript 환경을 잘 이해하고 사용하실 수 있는지를 검증하기 위한 목적입니다.
+Deploy the example using [Vercel](https://vercel.com):
 
-과제를 제출할때 최대한 많은 주석을 남겨주시면 채점시에 반영하도록 하겠습니다.
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/vercel/next.js/tree/canary/examples/with-typescript)
 
-## Frontend
+## How to use it?
 
-### 개발 과제를 시작하기에 앞서
+Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
 
-프론트엔드 프로젝트는 NextJs 와 Typescript, Material UI 를 사용하며 각 프레임워크의 홈페이지는 아래와 같습니다.
+```bash
+npx create-next-app --example with-typescript with-typescript-app
+# or
+yarn create next-app --example with-typescript with-typescript-app
+```
 
-[NextJs](https://nextjs.org/)
+Deploy it to the cloud with [Vercel](https://vercel.com/import?filter=next.js&utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
 
-[Material UI](https://material-ui.com/)
+## Notes
 
-개발 서버를 구동하려면 frontend 디렉토리에서 `yarn dev` 명령어를 입력하면 개발서버가 실행되고 `http://localhost:3000` 에서 페이지를 확인하실 수 있습니다.
+This example shows how to integrate the TypeScript type system into Next.js. Since TypeScript is supported out of the box with Next.js, all we have to do is to install TypeScript.
+
+```
+npm install --save-dev typescript
+```
+
+To enable TypeScript's features, we install the type declarations for React and Node.
+
+```
+npm install --save-dev @types/react @types/react-dom @types/node
+```
+
+When we run `next dev` the next time, Next.js will start looking for any `.ts` or `.tsx` files in our project and builds it. It even automatically creates a `tsconfig.json` file for our project with the recommended settings.
+
+Next.js has built-in TypeScript declarations, so we'll get autocompletion for Next.js' modules straight away.
+
+A `type-check` script is also added to `package.json`, which runs TypeScript's `tsc` CLI in `noEmit` mode to run type-checking separately. You can then include this, for example, in your `test` scripts.
